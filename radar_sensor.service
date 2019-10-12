@@ -1,0 +1,10 @@
+[Unit]
+Description=Service to control the display output based on the input of a radar sensor
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /path/to/your/displayController.py > /path/to/your/radar_sensor.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
